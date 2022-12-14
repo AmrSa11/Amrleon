@@ -1,0 +1,477 @@
+/* Rules of my page */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+/* start commponents */
+.special-heading{
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+  user-select: none;
+
+}
+.special-heading + p{
+  margin: -30px 0 0;
+text-align: center;
+font-size: 20px;
+color: #797977;
+user-select: none;
+}
+/* end commponents */
+:root {
+  --Maincolor: #10cab7;
+  --SecondryColor : #2C4755;
+  --sectionPadding: 60px;
+  --thirdcolor: #F6F6F6;
+  --LH: 1.6
+}
+html{
+  scroll-behavior: smooth;
+}
+
+/* To make the page pretty and didn`t fullscreen */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 15px;
+}
+@media (max-width: 767px){
+  .special-heading{
+    font-size: 60px;
+    user-select: none;
+
+  }
+  .special-heading + p{
+    margin-top: -20px;
+    
+  }
+}
+
+/* First of header style */
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+}
+header .logo {
+  margin: 10px;
+  height: 30px;
+}
+/* the 3 lines to view links, how to make */
+header ul span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+/*  3 lines width and viewport */
+header ul span span {
+  margin: 2px;
+  display: flex;
+  width: 30px;
+  background-color: black;
+  height: 2px;
+}
+/* the second line that he`is half */
+.line-two {
+  width: 15px;
+  transition: 0.5s;
+}
+/* to make the line full width */
+header span:hover .line-two {
+  width: 30px;
+}
+/* list port */
+ul li {
+  display: none;
+  border-bottom: #e9e9e9 2px solid;
+  background-color: var(--thirdcolor);
+  list-style: none;
+  padding: 15px;
+  width: 200px;
+  position: relative;
+  top: 10px;
+  z-index: 100;
+}
+/* list show */
+ul span:hover ul li {
+  display: flex;
+}
+/* arrow that is synombs up */
+header ul ul .first-link::after {
+  content: "";
+  border-bottom: 15px solid var(--thirdcolor);
+  border-top: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  position: absolute;
+  top: -25px;
+  right: 5px;
+  transition: 1s linear;
+}
+/* hover of text action */
+ul ul li a {
+  transition: 0.3s linear;
+  text-decoration: none;
+  color: black;
+  padding-right: 80px;
+
+}
+ul ul li:hover a {
+  transform: translateX(30%) scale(1.2);
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* header ended */
+.landing {
+  background-image: url(../Images/landing.jpg);
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 30px);
+  position: relative;
+}
+.landing .text-intro {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-width: 100%;
+}
+.landing .text-intro h1 {
+  font-size: 50px;
+  color: var(--Maincolor);
+  font-weight: bold;
+  margin: 0;
+}
+.landing .text-intro p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.8;
+}
+.features{
+    background-color: var(--thirdcolor);
+    margin: 0;
+    padding-bottom: var(--sectionPadding);
+    padding-top: var(--sectionPadding);
+}
+.features .container{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+    text-align: center;
+    grid-gap: 20px;
+    
+}
+.features .container i{
+    color: var(--Maincolor);
+}
+.features .container p{
+    line-height: 1.5;
+    font-size: 17px;
+    color: #aaa;
+}
+.features .container h3{
+    font-size: 22px;
+    font-weight: 800;
+    margin: 30px 0;
+}
+.features .container div:nth-child(1){
+    grid-area: 1 / 2  1 / 2;
+}
+.features .container div:nth-child(2){
+    grid-area: 2 / 3   1 / 2;
+
+}
+.features .container div:nth-child(3){
+    grid-area: 3 / 4   1 / 2;
+
+ }
+
+
+ .services-content .srv i{
+  color: var(--Maincolor);
+  flex-basis: 60px;
+ }
+ .services .services-content .srv{
+display: flex;
+margin-bottom: 30px;
+}
+ .services .services-content .srv .text{
+flex: 1;
+}
+ .services .services-content .srv .text h3{
+margin: 0px 0px 20px;
+text-align: left  ;
+  
+}
+ .services .services-content .srv .text p{
+color: #777;
+line-height: 1.6;  
+width: 300px;
+}
+.container .services-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+  grid-gap: 30px;
+  margin-top: 100px;
+  
+   }
+
+@media (max-width: 767px) {
+  .services .services-content .srv{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .services .services-content .srv h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+  
+.container .services-content .image-col{
+margin-left: 100px;
+position: relative;
+}
+.container .services-content .image-col img{
+  width: 260px;
+}
+.container .services-content .image-col::before{
+  content: "";
+  position: absolute;
+  background-color: var(--SecondryColor);
+  height: calc(100% + 100px);
+  width: 100px;
+  right: -40px;
+  top: -50px;
+  z-index: -1;
+}
+  @media (max-width: 1199px) {
+   .image-column{
+      display: none;
+    }
+  }
+  .portfolio{
+    padding-top: var(--sectionPadding);
+    padding-bottom: var(--sectionPadding);
+    background-color: var(--thirdcolor);
+  }
+  .portfolio .container .portfolio-content{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+    text-align: center;
+    grid-gap: 20px;
+
+  }
+  .portfolio .container .portfolio-content .card{
+    background-color: white;
+  }
+  .portfolio .container .portfolio-content .card img{
+    background-color: white;
+    max-width: 100%;
+  }
+  .portfolio .container .portfolio-content .card .info{
+padding: 20px;
+text-align: left;
+  }
+  .portfolio .container .portfolio-content .card .info p{
+    color: #777;
+    line-height: 1.6;
+  }
+  .portfolio .container .portfolio-content .card .info h3{
+    margin: 0;
+  }
+  /* End portfolio */
+  /* Start about */ 
+  .about{
+    margin: 0;
+    margin-top: 100px;
+    width: 100%;
+    background-color: white;
+    padding-top: var(--sectionPadding);
+    padding-bottom: var(--sectionPadding);
+  }
+  .about .container .about-content{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-bottom: var(--sectionPadding);
+    padding-top: var(--sectionPadding);
+  }
+  @media (max-width: 991px) {
+    .about .container .about-content{
+      flex-direction: column-reverse;
+      text-align: center;
+    } 
+   }
+
+  .about .container .about-content .image-about{
+    position: relative;
+  
+
+  }
+  .about .container .about-content .image-about img{
+    position: relative;
+    height: 375px;
+    width: 250px;
+    z-index: 100;
+
+  }
+  .about .container .about-content .image-about::before{
+    content: "";
+    position: absolute;
+    height: 102%;
+    width: 100px;
+    left: -20px;
+    top: -40px;
+    background-color: #eee;
+  }
+  .about .container .about-content .image-about::after{
+    content: "";
+    position: absolute;
+    height: calc(60%);
+    width: 100px;
+    right: -130px;
+    top: -30px;
+    border-bottom: solid 80px var(--Maincolor);
+    border-left: solid 80px var(--Maincolor);
+  }
+    @media (max-width: 1199px) {
+     .about .container .about-content .image-about::after, .about .container .about-content .image-about::before{
+      display: none;
+     }
+      
+    }
+  
+  .about .container .about-content .text-about{
+    width: 50%;
+    margin-left: 300px;
+    line-height: var(--LH);
+    font-size: 14px;
+    text-align: left;
+    }
+    @media (max-width: 991px) {
+      .about .container .about-content .text-about{
+        margin-left: 0;
+        font-size: 12px;
+        width: 100%;
+      } 
+     }
+  
+  .about .container .about-content .text-about h3{
+font-weight: 600;
+margin: 50px 0 50px;
+position: relative;
+line-height: 2;
+    }
+  .about .container .about-content .text-about p{
+margin: 20px 0 50px;
+    color: #777;
+    line-height: 2;
+}
+  .about .container .about-content .text-about hr{
+    width: 50%;
+    border-color: var(--Maincolor);
+    
+  }
+/* End about */
+/* Start contact */
+.contact{
+  padding-top: var(--sectionPadding);
+  padding-bottom: var(--sectionPadding);
+  background-color: var(--thirdcolor);
+}
+.conatct .info{
+  padding-top: var(--sectionPadding);
+  padding-bottom: var(--sectionPadding);
+  text-align: center;
+}
+.contact .info .label{
+  font-weight: 800;
+  color: var(--SecondryColor);
+  font-size: 30px;
+  margin-bottom: 15px;
+  letter-spacing: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .info .links{
+  color: var(--Maincolor);
+  font-weight: 800;
+  font-size: 30px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+}
+@media (max-width: 767px) {
+    .contact .info .label, .contact .info .links{
+      font-size: 25px;
+    }
+  
+}
+.contact .info .social{
+  display: flex;
+  padding: 15px;
+  font-size: 16px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.contact .info .social i{
+  margin-left: 10px;
+  color: var(--SecondryColor);
+
+}
+/* End contact */
+/* Startfooter */
+footer{
+  background-color: var(--SecondryColor);
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+footer span{
+  color: var(--Maincolor);
+  font-weight: 800;
+}
