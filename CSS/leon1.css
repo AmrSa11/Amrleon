@@ -124,11 +124,11 @@ ul ul li a {
   transition: 0.3s linear;
   text-decoration: none;
   color: black;
-  padding-right: 80px;
+  padding-right: 30px;
 
 }
 ul ul li:hover a {
-  transform: translateX(30%) scale(1.2);
+  transform: translateX(30%) scale(1.1);
 }
 /* small */
 @media (min-width: 768px) {
